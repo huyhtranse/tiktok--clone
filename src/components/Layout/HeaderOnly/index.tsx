@@ -1,7 +1,7 @@
 import { ChildrenProps } from '~/interface';
 import Header from '~/components/Layout/components/Header';
 
-const DefaultLayout = ({ children }: ChildrenProps) => {
+const HeaderOnly = ({ children }: ChildrenProps) => {
   return (
     <div>
       <Header />
@@ -12,4 +12,4 @@ const DefaultLayout = ({ children }: ChildrenProps) => {
   );
 };
 
-export default DefaultLayout;
+export default HeaderOnly;
