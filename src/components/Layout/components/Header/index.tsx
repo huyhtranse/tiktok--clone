@@ -8,6 +8,8 @@ import Tippy from '@tippyjs/react/headless';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
+import AccountItem from '~/components/AccountItem';
+import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
@@ -15,7 +17,7 @@ const Header = () => {
   const [searchResult, setSearchResult] = useState<number[]>([]);
 
   setTimeout(() => {
-    setSearchResult([1, 3, 4]);
+    setSearchResult([]);
   }, 0);
 
   return (
@@ -26,11 +28,15 @@ const Header = () => {
           interactive
           visible={searchResult.length > 0}
           render={(attrs) => (
-            <PopperWrapper>
-              <div className={cx('search-result')} tabIndex={-1} {...attrs}>
-                Ket qua
-              </div>
-            </PopperWrapper>
+            <div className={cx('search-result')} tabIndex={-1} {...attrs}>
+              <PopperWrapper>
+                <h4 className={cx('search-title')}>Accounts</h4>
+                <AccountItem />
+                <AccountItem />
+                <AccountItem />
+                <AccountItem />
+              </PopperWrapper>
+            </div>
           )}
         >
           <div className={cx('search')}>
@@ -44,7 +50,10 @@ const Header = () => {
             </button>
           </div>
         </Tippy>
-        <div className=""></div>
+        <div className={cx('actions')}>
+          <Button text>Upload</Button>
+          <Button primary>Log in</Button>
+        </div>
       </div>
     </header>
   );
