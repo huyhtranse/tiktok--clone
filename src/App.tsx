@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from '~/routes';
 import { DefaultLayout } from '~/components/Layout';
 
-interface Route {
+interface RouteP {
   path: string;
   component: any;
   layout?: any;
@@ -14,7 +14,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          {publicRoutes.map((route: Route, index) => {
+          {publicRoutes.map((route: RouteP, index) => {
             const Page = route.component;
             let Layout: any = DefaultLayout;
 
