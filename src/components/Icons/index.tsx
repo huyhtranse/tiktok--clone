@@ -1,5 +1,3 @@
-import classNames from 'classnames';
-
 interface UploadIconProp {
   width?: string;
   height?: string;
