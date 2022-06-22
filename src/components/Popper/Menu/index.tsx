@@ -11,12 +11,13 @@ interface MenuProps {
   children: any;
   items: any[];
   onChange: any;
+  hideOnClick?: boolean;
 }
 
 const cx = classNames.bind(styles);
 const defaultFn = () => {};
 
-const Menu = ({ children, items = [], onChange = defaultFn }: MenuProps) => {
+const Menu = ({ children, items = [], hideOnClick = false, onChange = defaultFn }: MenuProps) => {
   const [history, setHistory] = useState([{ data: items }]);
   const current = history[history.length - 1];
 
@@ -44,6 +45,7 @@ const Menu = ({ children, items = [], onChange = defaultFn }: MenuProps) => {
       delay={[0, 700]}
       offset={[10, 10]}
       placement="bottom-end"
+      hideOnClick={hideOnClick}
       render={(attrs) => (
         <div className={cx('menu-list')} tabIndex={-1} {...attrs}>
           <PopperWrapper className={cx('menu-popper')}>

@@ -12,7 +12,9 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import { Link } from 'react-router-dom';
 
+import searchConfig from '~/config/router';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Button from '~/components/Button';
@@ -85,7 +87,9 @@ const Header = () => {
   return (
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
-        <img src={images.logo} alt="tiktok" />
+        <Link to={searchConfig.home} className={cx('logo-link')}>
+          <img src={images.logo} alt="tiktok" />
+        </Link>
 
         {/* Search */}
         <Search />
