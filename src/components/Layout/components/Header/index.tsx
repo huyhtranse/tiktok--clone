@@ -124,7 +124,7 @@ const Header = () => {
             {currentUser ? (
               <Image
                 className={cx('user-avatar')}
-                src="https://iimages.theconversation.com/files/457052/original/file-20220408-15-pl446k.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip"
+                src="https://images.theconversation.com/files/457052/original/file-20220408-15-pl446k.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip"
                 alt="NVA"
               />
             ) : (
