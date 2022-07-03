@@ -14,7 +14,7 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import { Link } from 'react-router-dom';
 
-import searchConfig from '~/config/router';
+import config from '~/config';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Button from '~/components/Button';
@@ -87,7 +87,7 @@ const Header = () => {
   return (
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
-        <Link to={searchConfig.home} className={cx('logo-link')}>
+        <Link to={config.routes.home} className={cx('logo-link')}>
           <img src={images.logo} alt="tiktok" />
         </Link>
 

@@ -1,5 +1,5 @@
 import { ChildrenProps } from '~/interface';
-import Header from '~/components/Layout/components/Header';
+import Header from '~/layouts/components/Header';
 
 const HeaderOnly = ({ children }: ChildrenProps) => {
   return (
