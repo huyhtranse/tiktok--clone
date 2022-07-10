@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
@@ -78,6 +79,23 @@ const Button = ({
       {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
     </Comp>
   );
+};
+
+Button.propTypes = {
+  to: PropTypes.string,
+  href: PropTypes.string,
+  primary: PropTypes.bool,
+  outline: PropTypes.bool,
+  small: PropTypes.bool,
+  large: PropTypes.bool,
+  text: PropTypes.bool,
+  rounded: PropTypes.bool,
+  disabled: PropTypes.bool,
+  children: PropTypes.node,
+  classNames: PropTypes.string,
+  leftIcon: PropTypes.node,
+  rightIcon: PropTypes.node,
+  onClick: PropTypes.func,
 };
 
 export default Button;
